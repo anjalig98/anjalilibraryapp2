@@ -1,72 +1,54 @@
-
-const express = require('express');
-
+const express=require('express');
 const authorsRouter = express.Router();
-const Authordata = require('../models/authordata');
+const Authordata = require('../model/Authordata');
 function router(nav){
-    
+    // var authorss=[
+    //     {
+    //         title:'Joseph Barbera',
+    //         year:'1911-2006',
+    //         works:'',
+    //         img:'jBarbera.jpg'
+    //     },
+    //     {
+    //         title:'J.K.Rowling',
+    //         year:'1965-Present',
+    //         works:'',
+    //         img:'JKRowling.jpg'
+    //     },
+    //     {
+    //         title:'Rachel Caine',
+    //         description:'1962-2020',
+    //         works:'',
+    //         img:'RachelCaine.jpg'
+    //     }
+    // ]
+
     authorsRouter.get('/',function(req,res){
         Authordata.find()
         .then(function(authors){
+
             res.render("authors",{
                 nav,
-                title:'Author',
+                title:'Library',
                 authors
+            });
         });
-        
- 
     });
-    });
-    
+
+
+
     authorsRouter.get('/:id',function(req,res){
-    const id = req.params.id;
-    Authordata.findOne({_id:id})
-    .then(function(author){
-        res.render('author',{
-            nav,
-             title:'Author',
-             author
-      });
-    
-     });
+        var id=req.params.id;
+        Authordata.findOne({_id:id})
+        .then(function(author){
+            res.render('author',{
+                nav,
+                title:'Library',
+                author
+            });
+        });
     });
-    authorsRouter.get('/delete/:id',function(req,res){
-        const id = req.params.id;
-        Authordata.remove({_id:id},function(err,red){
-            res.redirect("/authors");
-        })
-        
-    });
-    authorsRouter.get('/update/:id',function(req,res){
-        res.render('updateauthor',{
-            nav,
-            title: 'Library'
-            
-        })
-        var num = req.params.id;
-
-        authorsRouter.post('/update',function(req,res){
-            var item={
-                title:req.body.title,
-                year:req.body.year,
-                genre:req.body.genre,
-                image:req.body.image
-            }
-        
-            
-            
-            Authordata.findOneAndUpdate({_id:num},{$set:item},function(err,red){
-                res.redirect("/authors");
-    
-            })
-
-        
-    });
-
-});
-
     return authorsRouter;
-    
 }
 
-module.exports = router;
+module.exports=router;
