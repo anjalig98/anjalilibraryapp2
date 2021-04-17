@@ -9,94 +9,27 @@
       </button>
       <!-- <a href="/" class="navbar-brand">Home</a> -->
     </div>
-    <nav class="collapse navbar-collapse" role="navigation">
-      <ul class="navbar">
+    <nav class="navbar navbar-expand-lg ">
+ 
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+        <ul class="navbar">
+          <a class="nav-link"  routerLink="/">Home</a>
+            <a class="nav-link" routerLink="/books">Books</a>
+            <a class="nav-link"routerLink="/authors">Authors</a>
+            <a class="nav-link"routerLink="/login">Login</a>
+            <a class="nav-link"routerLink="/signup">Signup</a>
             
-                <li>
-                    <a class="nav-link">Home</a>
-                </li>
-                <li>
-                  <a class="nav-link">Books</a>
-                </li>
-                <li>
-                  <a class="nav-link">Authors</a>
-                </li>
-                <li>
-                  <a class="nav-link">Login</a>
-                </li>
-                <li>
-                  <a class="nav-link">Signup</a>
-                </li>
            
-            
-        
-      </ul>
-      <ul class="nav navbar-right navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+        </ul>
+      </div>
+    </nav>    
   </div>
 </header>
+<!-- <app-home></app-home> -->
+<router-outlet></router-outlet>
 
-<div id="masthead">  
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7">
-        <h1>Digital Library
-          <p class="lead"></p>
-        </h1>
-      </div>
-      <div class="col-md-5">
-        <div class="well well-lg"> 
-          <div class="row">
-            <div class="col-sm-12">
-              
-			
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-  </div><!-- /cont -->
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="top-spacer"> </div>
-      </div>
-    </div> 
-  </div><!-- /cont -->
-  
-</div>
-
-
-<div class="container">
-  <div class="row">
-    
-    <div class="col-md-12"> 
-      
-      <div class="panel">
-        <div class="panel-body">
-          
-          <!--/stories-->
-            
-        </div>
-      </div>
-                                                                                       
-	                                                
-                                                      
-   	</div><!--/col-12-->
-  </div>
-</div>
-                                                
-                                                                                
 <hr>
 
 <div class="container" id="footer">
@@ -105,9 +38,9 @@
       
       <h1>Follow Us</h1>
       <div class="btn-group">
-       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+        <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	      <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	      <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
       </div>
       
     </div>
@@ -123,6 +56,7 @@
     <div class="row">
       <div class="col-sm-6">
         <ul class="list-inline">
+          
           <li><i class="icon-facebook icon-2x"></i></li>
           <li><i class="icon-twitter icon-2x"></i></li>
           <li><i class="icon-google-plus icon-2x"></i></li>
