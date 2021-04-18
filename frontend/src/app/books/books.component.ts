@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { booksModel} from './books.model';
 
 @Component({
   selector: 'app-books',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
+  
+  // books: [{
+  //   title:'';
+  //   author:'';
+  //   genre:'';
+  //   image:''
+  // }] 
 
   constructor() { }
 
